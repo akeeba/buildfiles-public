@@ -55,7 +55,7 @@ Run `phing git` to produce the installable ZIP in the working copy's `release` d
 
 To create a package of a stable release run `phing -Dversion=1.2.3` where `1.2.3` is the version number. You can find the version number at the top of the `CHANGELOG` or `CHANGELOG.md` file in the software's working copy.
 
-To avoid any ambiguity on whether a package is "official" or not, you MUST an identifying version suffix to your builds. If you are building version `1.2.3` of an extension, please use something like `phing -Dversion=1.2.3-something` where `something` is something that identifies you, e.g. your name, initials, username etc.
+To avoid any ambiguity on whether a package is "official" or not, you MUST add an identifying version suffix to your builds. If you are building version `1.2.3` of an extension, please use something like `phing -Dversion=1.2.3-something` where `something` is something that identifies you, e.g. your name, initials, username etc.
 
 ## Why is there no Composer, NPM, JS/CSS building, or release automation?
 

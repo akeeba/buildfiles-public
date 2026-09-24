@@ -373,7 +373,7 @@ The opening die statement may be omitted. The next line may have EITHER the name
 If the `CHANGELOG` file is not present then Akeeba Release Maker will not know about it, and will not be able to attach it to the end of the release notes. Moreover, it will not be uploaded with development releases, therefore those releases will have no release notes (since the development release's release notes is just the changelog of the latest version).
 
 The changelog item lines are preceded by the following symbols:
-* `!` Very important change, or security fix
+* `!` Important change; may also be used for a security update
 * `+` New feature
 * `-` Removed feature
 * `~` Minor change, behaviour change, etc
@@ -381,7 +381,8 @@ The changelog item lines are preceded by the following symbols:
   * `# [LOW]` A low priority bugfix. Something which could be worked around, just had a minor impact, or was otherwise not incredibly important. 
   * `# [MEDIUM]` A potentially show-stopper issue which only happened in rare circumstances.
   * `# [HIGH]` An issue affecting most if not all users which would have significant impact on reliability, or even cause a hard stop.
-  * `!` A security fix. Note that security fixes, while technically still bugs, are not assigned a generic bugfix symbol in the changelog because of their importance.
+
+Within each version, order the lines `!`, `+`, `-`, `~`, then the `#` lines sorted by priority (`[CRITICAL]` where used, `[HIGH]`, `[MEDIUM]`, `[LOW]`).
 
 These symbols have semantic meaning in Akeeba Release System and will be used to render information according to their meaning. Lines without any symbol may be treated as comments.
 
